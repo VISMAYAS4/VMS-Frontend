@@ -1,5 +1,6 @@
 import authHeader from "../services/auth-header";
 
+// Add Customers
 export const addcustomer = (msg) => {
     return { type: "ADD_CUSTOMER", payload: { message: msg } }
 }
@@ -25,6 +26,8 @@ export const addCustomer = (payload) => {
     }
 }
 
+
+// Fetching Customers
 export const fetchcustomers = (payload) => {
     return { type: "FETCH_CUSTOMERS", payload: payload }
 }
@@ -45,6 +48,7 @@ export const fetchCustomers = () => {
     }
 }
 
+// Delete Customers
 export const removeCustomer = (msg) => {
     return { type: "DELETE_CUSTOMER", payload: { message: msg }  }
 
@@ -72,6 +76,8 @@ export const deleteCustomer = (customerId) => {
     }
 }
 
+
+// Update Customers
 export const editCustomer = (msg) => {
     return { type: "UPDATE_CUSTOMER", payload: { message: msg } }
 }
@@ -98,6 +104,8 @@ export const updateCustomer = (payload) => {
 
 }
 
+
+// Fetch Customer By ID
 export const fetchCustomerBy_ID = (payload) => {
     return { type: "VIEW_CUSTOMER_ID", payload: payload }
 }
@@ -123,6 +131,8 @@ export const fetchCustomerByID = (payload) => {
     }
 }
 
+
+// Fetching Customers By Vehicle Type
 export const fetchCustomerBy_Vtype = (payload) => {
     return { type: "VIEW_CUSTOMER_BY_VTYPE", payload: payload }
 }
@@ -149,6 +159,8 @@ export const fetchCustomerByVtype = (payload) => {
     }
 }
 
+
+// Fetching Customers By Vehicle Location
 export const fetchCustomerBy_VehicleLocation = (payload) => {
     return { type: "VIEW_CUSTOMER_VEHICLE_LOCATION", payload: payload }
 }
@@ -175,7 +187,7 @@ export const fetchCustomerByVehicleLocation = (payload) => {
     }
 }
 
-
+// Fetching Customers By Email
 export const fetchByCustomer_Email = (payload) => {
     return { type: "VIEW_CUSTOMER_EMAIL", payload: payload }
 }
